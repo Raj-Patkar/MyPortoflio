@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience | Raj Patkar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Raj Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="experience-section">
+    <h1 class="experience-title">Experience</h1>
+
+    <div class="experience-cards">
+
+<div class="experience-card">
+  <div class="experience-logo">
+    <img src="models/craftlabai_logo.jpg" alt="Meta Craftlab Logo" />
+  </div>
+  <h2>Meta Craftlab</h2>
+  <h4>Full Stack Developer Intern</h4>
+  <p>Worked on web applications as part of a full stack team. Contributed to real-world projects, enhancing frontend and backend workflows.</p>
+</div>
+
+
+<div class="experience-card">
+  <div class="experience-logo">
+    <img src="models/prodigy_infotech_logo.jpg" alt="Prodigy InfoTech Logo" />
+  </div>
+  <h2>Prodigy InfoTech</h2>
+  <h4>Web Developer Intern</h4>
+  <p>Created web applications and responsive layouts. Learned practical implementation of HTML, CSS, JS, and React.</p>
+</div>
+
+
+      <div class="experience-card">
+          <div class="experience-logo">
+            <img src="models/VIT.png" alt="VIT Logo" />
+        </div>
+        <h2>Vidyalankar Institute of Technology</h2>
+        <h4>SandboxVIT YouTube Content Creator</h4>
+        <p>Produced and hosted technical videos for the official college channel. Engaged students in academic and tech discussions.</p>
+      </div>
+
+      <div class="experience-card">
+          <div class="experience-logo">
+            <img src="models/gdg.jpg" alt="GDG Logo" />
+        </div>
+        <h2>Google Developer Group - VIT</h2>
+        <h4>Media Core Member</h4>
+        <p>Led visual storytelling and promotional content for GDG events. Helped boost student engagement through multimedia strategy.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+      
+  function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("active");
+  }
+
+  </script>
+</body>
+</html>

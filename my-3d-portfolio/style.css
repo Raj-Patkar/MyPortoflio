@@ -76,7 +76,7 @@ nav ul li a:hover {
 }
 .intro-paragraph strong {
   font-weight: 1000;
-  color: #ffcc01; /* dark emphasis color */
+  color: #d62c2c; /* dark emphasis color */
 }
 
 
@@ -141,8 +141,11 @@ model-viewer {
   background: linear-gradient(
   to bottom,
   transparent,
-  #59e7f772 25%,
-  #6b59f7b2 75%,
+#89f7fe 25%,
+#66a6ffda 75%,
+
+
+
   transparent
 );
 
@@ -171,7 +174,7 @@ model-viewer {
 
 .dynamic-card:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 25px 50px rgba(230, 8, 8, 0.998);
+  box-shadow: 0 25px 50px rgba(245, 183, 26, 0.998);
 }
 
 .dynamic-card::before {

@@ -1,0 +1,299 @@
+/* === GENERAL PAGE STYLING === */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffffff49, #ffffff);
+  font-family: 'Space Grotesk', sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* === HEADER === */
+header {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Playfair Display', serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: black;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #282ab1;
+}
+
+/* === EXPERIENCE SECTION === */
+.experience-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #e4f0ff, #ffffff);
+  text-align: center;
+}
+
+.experience-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1a1a1a;
+}
+
+/* === CARDS CONTAINER === */
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* === SINGLE CARD === */
+.experience-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  text-align: center;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.experience-logo {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-logo img {
+  max-height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover .experience-logo img {
+  transform: scale(1.2);
+}
+
+.experience-card h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.experience-card p {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* === BUTTON CONTAINER === */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* === CUSTOM BUTTON === */
+.btn {
+  border: none;
+  width: 13em;
+  height: 4em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1c1a1c;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  margin: 0 auto;
+}
+
+.sparkle {
+  fill: #aaaaaa;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: #aaaaaa;
+  font-size: medium;
+}
+
+.btn:hover {
+  background: linear-gradient(0deg, #6899fe, blue);
+  box-shadow:
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917ff;
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
+
+/* === FOOTER === */
+.footer {
+  background: #111;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.footer-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  font-size: 26px;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00ffff;
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #888;
+}
+
+/* === HAMBURGER === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: black;
+  transition: all 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #000;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .experience-section {
+    padding: 4rem 1rem;
+  }
+
+  .experience-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .experience-card p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 12em;
+    height: 3.5em;
+    font-size: 0.9rem;
+  }
+}

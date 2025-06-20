@@ -1,148 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <title>Document</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Raj Portfolio</title>
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Grotesk&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-    <header>
-  <nav>
-    <div class="logo">Raj Portfolio</div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <ul id="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<div class="model-section">
-  <img src="models/skills.png" alt="Raj Patkar" class="raj-image"/>
-</div>
-
-    <section class="experience-section">
-  <h2 class="experience-title">Skill Cloud</h2>
-  <div class="tag-cloud">
-
-    <div class="tag-category">
-      <h3><i class="fas fa-code"></i> Technical</h3>
-      <div class="tags">
-        <span>Python</span>
-        <span>Data Structures</span>
-        <span>C</span>
-        <span>Java</span>
-        <span>JavaScript</span>
-        <span>Assembly</span>
-        <span>HTML/CSS</span>
-        <span>Figma</span>
-        <span>MATLAB</span>
-        <span>SQL</span>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Raj Portfolio</div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="tag-category">
-      <h3><i class="fas fa-tools"></i> Tools</h3>
-      <div class="tags">
-        <span>GitHub</span>
-        <span>VS Code</span>
-        <span>MySQL Workbench</span>
-        <span>AutoCAD</span>
-        <span>Ltspice</span>
-        <span>DevC++</span>
-        <span>Cascadeur</span>
-      </div>
-    </div>
-
-    <div class="tag-category">
-      <h3><i class="fas fa-brain"></i> Soft Skills</h3>
-      <div class="tags">
-        <span>Public Speaking</span>
-        <span>Team Coordination</span>
-        <span>Team Leadership</span>
-      </div>
-    </div>
-
-    <div class="tag-category">
-      <h3><i class="fas fa-language"></i> Languages</h3>
-      <div class="tags">
-        <span>English</span>
-        <span>Hindi</span>
-        <span>Marathi</span>
-      </div>
-    </div>
+  <div class="model-section">
+    <img src="models/skills.png" alt="Raj Patkar" class="raj-image"/>
   </div>
-</section>
 
+  <section class="experience-section">
+    <h2 class="experience-title">Skill Cloud</h2>
+    <div class="tag-cloud">
 
+      <div class="tag-category">
+        <h3><i class="fas fa-code"></i> Technical</h3>
+        <div class="tags">
+          <span>Python</span>
+          <span>Data Structures</span>
+          <span>C</span>
+          <span>Java</span>
+          <span>JavaScript</span>
+          <span>Assembly</span>
+          <span>HTML/CSS</span>
+          <span>Figma</span>
+          <span>MATLAB</span>
+          <span>SQL</span>
+          <span>Cloud</span>
+        </div>
+      </div>
 
+      <div class="tag-category">
+        <h3><i class="fas fa-tools"></i> Tools</h3>
+        <div class="tags">
+          <span>GitHub</span>
+          <span>VS Code</span>
+          <span>MySQL Workbench</span>
+          <span>AutoCAD</span>
+          <span>Ltspice</span>
+          <span>DevC++</span>
+          <span>Cascadeur</span>
+          <span>AWS</span>
+          <span>GCP</span>
+          <span>Azure</span>          
+        </div>
+      </div>
 
+      <div class="tag-category">
+        <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+        <div class="tags">
+          <span>Public Speaking</span>
+          <span>Team Coordination</span>
+          <span>Team Leadership</span>
+        </div>
+      </div>
 
+      <div class="tag-category">
+        <h3><i class="fas fa-language"></i> Languages</h3>
+        <div class="tags">
+          <span>English</span>
+          <span>Hindi</span>
+          <span>Marathi</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/a2d9d6c0be.js" crossorigin="anonymous"></script>
   <script>
-  const h1 = document.getElementById("animated-heading");
-  const text = h1.textContent;
-  h1.innerHTML = [...text].map(char => `<span>${char}</span>`).join('');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-  const spans = h1.querySelectorAll("span");
-
-  spans.forEach((span, i) => {
-    span.addEventListener("mouseenter", () => {
-      spans.forEach(s => s.classList.remove("hover-main", "hover-side"));
-      span.classList.add("hover-main");
-      if (spans[i - 1]) spans[i - 1].classList.add("hover-side");
-      if (spans[i + 1]) spans[i + 1].classList.add("hover-side");
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
+  </script>
 
-    span.addEventListener("mouseleave", () => {
-      spans.forEach(s => s.classList.remove("hover-main", "hover-side"));
-    });
-  });
-
-
-    const cards = document.querySelectorAll(".dynamic-card");
-  let floatOffset = 0;
-
-  function animateCards() {
-    floatOffset += 0.03;
-    cards.forEach((card, i) => {
-      const offset = Math.sin(floatOffset + i) * 17;
-      card.style.transform = `translateY(${offset}px)`;
-    });
-    requestAnimationFrame(animateCards);
-  }
-
-  animateCards();
-
-  const overlay = document.getElementById('transitionOverlay');
-  const viewMoreBtns = document.querySelectorAll('.btn');
-
-  viewMoreBtns.forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      overlay.classList.add('active');
-      const href = this.getAttribute('href');
-      setTimeout(() => {
-        window.location.href = href;
-      }, 1300); // allow time for overlay + spinner
-    });
-  });
-
-
-  
-  
-  function toggleMenu() {
-    const navMenu = document.getElementById("nav-menu");
-    navMenu.classList.toggle("active");
-  }
-
-</script>
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-text">Thanks for visiting!</div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-copy">&copy; 2025 Raj Portfolio. All rights reserved.</div>
+    </div>
+  </footer>
 </body>
 </html>

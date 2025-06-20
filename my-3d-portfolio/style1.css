@@ -1,15 +1,20 @@
-/* Base Reset and Background */
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #ffffff49, #ffffff);
-  color: white;
   font-family: 'Space Grotesk', sans-serif;
+  color: #222;
   overflow-x: hidden;
 }
 
-/* Header Navigation */
-header {
+.tags span {
+  cursor: pointer;  /* 👈 this makes it look clickable */
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(0, 0, 0, 0.1);
   padding: 15px 30px;
   position: sticky;
@@ -18,53 +23,74 @@ header {
   font-family: 'Playfair Display', serif;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .logo {
-  font-size: 1.5rem;
-  color: black;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
-
-
-nav ul {
-  list-style: none;
+.nav-menu {
   display: flex;
   gap: 20px;
+  list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
-nav ul li a {
-  color: rgb(0, 0, 0);
+.nav-menu li a {
   text-decoration: none;
+  color: #000;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-menu li a:hover {
   color: #282ab1;
 }
 
-
-.experience-section {
-  padding: 2rem 2rem;
-  width: 100%;
-  background: linear-gradient(to bottom, #e4f0ff, #ffffff);
-  display: flex;
+.hamburger {
+  display: none;
   flex-direction: column;
-  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+/* Hero Image */
+.model-section {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.raj-image {
+  max-width: 100%;
+  height: 270px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.raj-image:hover {
+  transform: scale(1.05);
+}
+
+/* Experience Section */
+.experience-section {
+  padding: 3rem 2rem;
   text-align: center;
 }
 
+.experience-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
 
 .tag-cloud {
   display: flex;
@@ -73,13 +99,10 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
-  text-align: center;
 }
-
 
 .tag-category {
   max-width: 900px;
@@ -110,13 +133,11 @@ nav ul li a:hover {
 
 .tags span {
   background: linear-gradient(to right, #6f7df8, #f268bb);
-  color: white;
+  color: #fff;
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.95rem;
-  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
 }
 
 .tags span:hover {
@@ -124,40 +145,72 @@ nav ul li a:hover {
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.experience-card h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
 }
 
-  .experience-card h2 {
-    font-size: 1.2rem;
+.footer-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
   }
 
-  .model-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li a {
+    padding: 15px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .experience-title {
+    font-size: 2rem;
+  }
+
+  .tags span {
+    font-size: 0.95rem;
+  }
+
+    .footer-text {
+    font-size: 1rem;
+  }
 }
 
-.raj-image {
-  max-width: 100%;
-  height: 270px;
-  display: block;
-  transition: transform 0.4s ease;
-}
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1.7rem;
+  }
 
-.raj-image:hover {
-  transform: scale(1.05);
-}   
-
-
-.experience-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 2rem;
-  text-align: center;
+  .tags span {
+    font-size: 0.9rem;
+  }
 }
